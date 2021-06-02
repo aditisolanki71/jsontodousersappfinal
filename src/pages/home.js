@@ -32,7 +32,7 @@ const Home = () => {
                <td>{user.email}</td>
                <td>
                   <Link class="btn btn-info mr-2" style={{'marginRight': '2px'}}>View</Link>
-                  <Link class="btn btn-success mr-2" style={{'marginRight': '2px'}}>Edit</Link>
+                  <Link to={`/user/edit/${user.id}`} class="btn btn-success mr-2" style={{'marginRight': '2px'}}>Edit</Link>
                   <Link class="btn btn-danger mr-2" style={{'marginRight': '2px'}}>Delete</Link>
                </td>
             </tr>
