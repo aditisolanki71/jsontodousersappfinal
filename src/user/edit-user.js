@@ -22,6 +22,9 @@ const EditUser = () => {
         await axios.put(`http://localhost:3001/users/${id}`,user)
       history.push('/')
     }
+    const handleCancel = () => {
+       history.push('/')
+    }
     const {email,name,contact} = user
    return (
       <div>
@@ -65,9 +68,9 @@ const EditUser = () => {
              onChange={e => handleChange(e)}
           />
        </div>
-       <button type="submit" class="btn btn-primary">Submit</button>
-       <button type="button" class="btn btn-primary">cancel</button>
-     </form>
+       <button type="submit" class="btn btn-primary" style={{'marginRight': '2px'}}>Submit</button>
+       <button type="button" onClick={e => handleCancel()} class="btn btn-warning">cancel</button>
+   </form>
      </div>
      </div>
       </div>
