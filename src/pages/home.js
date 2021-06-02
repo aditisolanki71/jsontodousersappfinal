@@ -25,9 +25,9 @@ const Home = () => {
          <table class="table">
          <thead>
             <tr>
+            <th scope="col">No.</th>
                <th scope="col">Name</th>
                <th scope="col">Email</th>
-               <th scope="col">Contact</th>
                <th scope="col">Action</th>
             </tr>
          </thead>
@@ -38,7 +38,7 @@ const Home = () => {
                <td>{user.name}</td>
                <td>{user.email}</td>
                <td>
-                  <Link class="btn btn-info mr-2" style={{'marginRight': '2px'}}>View</Link>
+                  <Link to={`/user/view/${user.id}`} class="btn btn-info mr-2" style={{'marginRight': '2px'}}>View</Link>
                   <Link to={`/user/edit/${user.id}`} class="btn btn-success mr-2" style={{'marginRight': '2px'}}>Edit</Link>
                   <Link class="btn btn-danger mr-2" onClick={() => handleDelete(user.id)} style={{'marginRight': '2px'}}>Delete</Link>
                </td>

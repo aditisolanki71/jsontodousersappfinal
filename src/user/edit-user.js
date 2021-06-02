@@ -25,7 +25,7 @@ const EditUser = () => {
     const handleCancel = () => {
        history.push('/')
     }
-    const {email,name,contact} = user
+    const {email,name,phone} = user
    return (
       <div>
           <div className="container">
@@ -63,8 +63,8 @@ const EditUser = () => {
              type="text"
              className="form-control" 
              placeholder="Enter Name"
-             value={contact}
-             name="contact"
+             value={phone}
+             name="phone"
              onChange={e => handleChange(e)}
           />
        </div>

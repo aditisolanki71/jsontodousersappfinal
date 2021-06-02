@@ -8,7 +8,7 @@ const AddUser = () => {
    const [user,setUser] = useState({
       name: '',
       email: '',
-      contact: '',
+      phone: '',
    })
 
    const handleChange = (e) => {
@@ -20,7 +20,7 @@ const AddUser = () => {
       await axios.post('http://localhost:3001/users',user)
       history.push('/')
    }
-   const {email,name,contact} = user
+   const {email,name,phone} = user
    return (
    <div className="container">
      <div className="w-75 mx-auto shadow p-5">
@@ -57,8 +57,8 @@ const AddUser = () => {
             type="text"
             className="form-control" 
             placeholder="Enter Name"
-            value={contact}
-            name="contact"
+            value={phone}
+            name="phone"
             onChange={e => handleChange(e)}
          />
       </div>
