@@ -7,6 +7,15 @@ const EditUser = () => {
    const history = useHistory()
    const [user,setUser] = useState({})
    useEffect(() => {
+      let auth = localStorage.getItem('auth');
+      console.log('auth',auth)
+      //temporary code for login file
+      //if user not login than token doesn't set so it will redirect to login using belove code
+      // if(!auth) {
+      //    history.push('/login')
+      // }
+   },[])
+   useEffect(() => {
       loadUser()
     },[])
 

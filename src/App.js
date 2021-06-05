@@ -7,6 +7,7 @@ import Aboutus from './pages/aboutus'
 import AddUser from './user/create-user'
 import EditUser from './user/edit-user'
 import ViewUser from './user/view-user'
+import Login from './containers/login'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
     <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/login" exact component={Login} />
         <Route path="/contact" exact component={Contactus}/>
         <Route path="/about" exact component={Aboutus}/>
         <Route path="/user/add" exact component={AddUser}/>
