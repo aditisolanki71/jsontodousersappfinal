@@ -1,4 +1,5 @@
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
+import { createBrowserHistory } from 'history';
 import './App.css';
 import Navbar from './layout/navbar'
 import Home from './pages/home'
@@ -10,6 +11,8 @@ import EditUser from './user/edit-user'
 import ViewUser from './user/view-user'
 import Login from './containers/login'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
+
+export const history = createBrowserHistory();
 function App() {
   return (
     <Router>

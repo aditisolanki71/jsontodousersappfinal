@@ -16,15 +16,14 @@ export const loginAsync = ({email,password,history}) => {
       // console.log('response',response)
       const response = await axios.post('https://cloud-project-backend.herokuapp.com/api/auth/signin',{username: email,password});
       console.log('res',response)
-      console.log('history',history)
       const { data } = response;
       localStorage.setItem('auth', JSON.stringify(data));
-      console.log('data',JSON.stringify(data))
-      console.log('accesstoken',JSON.stringify(data.accessToken))
       localStorage.setItem('accesstoken', JSON.stringify(data.accessToken));
+      console.log('accesstoken',JSON.stringify(data.accessToken))
       //here we set our code into localstorage
       //get data from localstorage in edit-user.js file
       //localStorage.setItem('auth', JSON.stringify({ accessToken:response.accessToken }));
+      dispatch(login(data));
       history.push('/home')
       }
       catch (err) {
