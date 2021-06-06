@@ -28,3 +28,17 @@ export const loginAsync = ({email,password,history}) => {
        }
    }
 }
+
+export const logout = () => ({
+   type: "LOGOUT"
+ });
+ 
+ export const logoutAsync = (history) => {
+    console.log('inside logout')
+   return (dispatch) => {
+     localStorage.removeItem('auth');
+     dispatch(logout());
+     history.push("/login")
+   };
+ };
+ 

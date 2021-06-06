@@ -21,6 +21,10 @@ const Home = () => {
       loaduser()
    }
    return (
+      <div className="container-fluid">
+      <div style={{'display': 'flex','justifyContent': 'flex-end', 'alignItems': 'flex-end','padding' : '2px'}}>
+         <Link class="btn btn-primary mr-2" to="/user/add">Add User</Link>
+      </div>
       <div style={{'padding': '2px','display': 'flex'}}>
          <table class="table">
          <thead>
@@ -46,6 +50,7 @@ const Home = () => {
          ))}
          </tbody>
          </table>
+      </div>
       </div>
    )
 }
