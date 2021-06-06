@@ -40,6 +40,7 @@ export const logout = () => ({
  export const logoutAsync = (history) => {
     console.log('inside logout')
    return (dispatch) => {
+      localStorage.removeItem('auth');
      localStorage.removeItem('accesstoken');
      dispatch(logout());
      history.push("/login")

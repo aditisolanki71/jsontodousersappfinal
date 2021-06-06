@@ -1,4 +1,4 @@
-import React,{useState}from "react"
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import {loginAsync} from '../actions/auth';
 import {useHistory} from 'react-router-dom';
@@ -9,6 +9,14 @@ import {useHistory} from 'react-router-dom';
 const Login = (props) => {
    const history = useHistory();
    console.log('login his',history);
+
+   useEffect(()=> {
+      console.log('login page')
+      console.log('user auth',props.userAuth)
+      if(props.userAuth) {
+         props.history.push("/home")
+      }
+   },[]);
    const onSubmit = e => {
       e.preventDefault();
       console.log('inside on submit')
