@@ -9,6 +9,8 @@ const EditUser = () => {
    useEffect(() => {
       let auth = localStorage.getItem('auth');
       console.log('auth',auth)
+      let accessToken = localStorage.getItem('accesstoken')
+      console.log('accesstoken',accessToken)
       //temporary code for login file
       //if user not login than token doesn't set so it will redirect to login using belove code
       // if(!auth) {
