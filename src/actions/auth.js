@@ -20,7 +20,7 @@ export const loginAsync = ({email,password,history}) => {
       //here we set our code into localstorage
       //get data from localstorage in edit-user.js file
       localStorage.setItem('auth', JSON.stringify({ accessToken:response.accessToken }));
-      history.push('/')
+      history.push('/home')
       }
       catch (err) {
          console.log(err);

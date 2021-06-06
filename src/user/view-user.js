@@ -24,7 +24,7 @@ const ViewUser = () => {
                <h5 class="card-title">{user.name}</h5>
                <p class="card-text">{user.email}</p>
                <p class="card-text">{user.phone}</p>
-               <Link to="/" class="btn btn-primary">Home</Link>
+               <Link to="/home" class="btn btn-primary">Home</Link>
             </div>
             {/* <div class="card-footer text-muted">
                2 days ago

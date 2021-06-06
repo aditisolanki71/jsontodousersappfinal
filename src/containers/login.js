@@ -2,6 +2,8 @@ import React,{useState}from "react"
 import { connect } from 'react-redux';
 import {loginAsync} from '../actions/auth';
 import {useHistory} from 'react-router-dom';
+//link:-https://cloud-project-backend.herokuapp.com/api/
+// import './login.css'
 //tanushsoftware87@gmail.com
 //shopadmin
 const Login = (props) => {
@@ -18,8 +20,10 @@ const Login = (props) => {
    const [password,setPassword] = useState(undefined)
    return (
       <div className="container">
+         <div className="w-75 mx-auto shadow p-5">
+         <h2>Login</h2>
          <form onSubmit={e => onSubmit(e)}>
-         <div class="form-group">
+         <div class="form-group mb-2">
          <label for="exampleInputEmail1">Email</label>
          <input
              id="exampleInputEmail1"
@@ -31,7 +35,7 @@ const Login = (props) => {
              onChange={e => setEmail(e.target.value)}
           />
        </div>
-       <div class="form-group">
+       <div class="form-group mb-2">
          <label for="exampleInputPassword">Password</label>
          <input
              id="exampleInputPassword"
@@ -45,6 +49,7 @@ const Login = (props) => {
        </div>
        <button type="submit">Sign in</button>
          </form>
+      </div>
       </div>
    )
 }

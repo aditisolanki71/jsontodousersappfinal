@@ -29,10 +29,10 @@ const EditUser = () => {
     const onSubmit = async e=> {
        e.preventDefault()
         await axios.put(`http://localhost:3001/users/${id}`,user)
-      history.push('/')
+      history.push('/home')
     }
     const handleCancel = () => {
-       history.push('/')
+       history.push('/home')
     }
     const {email,name,phone} = user
    return (

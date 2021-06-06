@@ -17,7 +17,7 @@ const Home = () => {
    const handleDelete = async id => {
       console.log('inside handle dlt',id)
       await axios.delete(`http://localhost:3001/users/${id}`)
-      history.push('/')
+      history.push('/home')
       loaduser()
    }
    return (
