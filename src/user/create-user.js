@@ -23,8 +23,8 @@ const AddUser = () => {
    const {email,name,phone} = user
    return (
    <div className="container">
-     <div className="w-75 mx-auto shadow p-5">
-       <h2>Add User</h2>
+     <div className="w-75 mx-auto shadow p-5">  
+       <h2>Add</h2>
       <form onSubmit={e => onSubmit(e)}>
       <div class="form-group">
         <label for="exampleInputName">Name</label>
